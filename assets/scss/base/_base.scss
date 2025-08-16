@@ -1,0 +1,21 @@
+/* 標籤的基本樣式 */
+body {
+  letter-spacing: 0.02em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  //img-fluid
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
