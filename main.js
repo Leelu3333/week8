@@ -20,3 +20,24 @@ console.log('Hello world');
     userAvatar.classList.add('d-none');
     guestMessage.classList.remove('d-none');
   }
+
+   var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+      },
+      slidesPerView: 1.1,
+      spaceBetween: 16,
+      breakpoints: {
+    
+    // when window width is >= 576px
+    576: {
+      slidesPerView: 2,
+    },
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 3,
+    },
+     
+  }
+    });

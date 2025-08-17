@@ -1,3 +1,43 @@
-.index-title {
-  font-size: 100px;
+.banner {
+  background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week8/index/hero-bg.png?raw=true');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding-top: 112px;
+}
+.card {
+  width: 277px;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 992px) {
+  .banner {
+    padding-top: 300px;
+  }
+  .w-lg-700 {
+    width: 700px;
+  }
+  .card {
+    width: 25%;
+    max-width: 416px;
+    height: 600px;
+    transition: width 1s;
+    .btn-hover {
+      display: none;
+      width: 0;
+      transition: all 1s;
+    }
+    &:hover {
+      width: 100%;
+      .btn-hover {
+        display: inline-block;
+        width: 100%;
+      }
+    }
+  }
 }
