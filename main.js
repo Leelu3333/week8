@@ -35,7 +35,7 @@ console.log('Hello world');
       slidesPerView: 2,
     },
     // when window width is >= 768px
-    768: {
+    992: {
       slidesPerView: 3,
     },
      
