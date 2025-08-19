@@ -69,7 +69,7 @@
 
     <div id="user-status" class="d-none d-lg-block">
       <!-- 會員頭像 -->
-      <div id="user-avatar" class="d-flex align-items-center ms-5">
+      <a href="#" id="user-avatar" class="d-flex align-items-center ms-5">
         <img
           src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week8/user/avatar-1.png?raw=true"
           alt="會員頭像"
@@ -77,8 +77,7 @@
           height="32px"
         />
         <p class="ms-2 py-1 text-primary-100 fw-bold">Jessica</p>
-      </div>
-
+      </a>
       <!-- 未登入按鈕 -->
       <div id="guest-message" class="ms-5">
         <button
@@ -89,24 +88,24 @@
         </button>
       </div>
     </div>
-
+    <!-- 登入 -->
     <button
       class="btn border-0 p-2 d-lg-none"
       type="button"
       data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasNavbar"
-      aria-controls="offcanvasNavbar"
+      data-bs-target="#offcanvas-user-avatar"
+      aria-controls="offcanvasExample"
+      id="offcanvas-user-avatar-btn"
     >
       <span class="material-icons-outlined align-bottom"> menu </span>
     </button>
     <div
       class="offcanvas offcanvas-end"
       tabindex="-1"
-      id="offcanvasNavbar"
-      aria-labelledby="offcanvasNavbarLabel"
+      id="offcanvas-user-avatar"
+      aria-labelledby="offcanvasExampleLabel"
     >
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+      <div class="offcanvas-header pt-7 pe-7">
         <button
           type="button"
           class="btn-close text-reset"
@@ -114,44 +113,116 @@
           aria-label="Close"
         ></button>
       </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="offcanvasNavbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
+      <div class="offcanvas-body p-7 pt-0">
+        <div class="d-flex align-items-center pb-5 border-bottom">
+          <div class="me-2">
+            <img
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week8/user/avatar-1.png?raw=true"
+              alt="avatar-1.png"
+              width="32px"
+            />
+          </div>
+          <div>
+            <p class="fw-bold text-primary-100">Jessica</p>
+            <p class="text-neutral-80">jessica.yen@gamil.com</p>
+          </div>
+        </div>
+        <div class="d-flex flex-column mt-5 h-100">
+          <ul>
+            <li>
+              <a href="#" class="w-100 text-neutral-80 py-4"
+                ><span
+                  class="material-icons-outlined align-bottom text-neutral-80 me-2"
+                >
+                  article </span
+                >訂單管理</a
+              >
+            </li>
+            <li>
+              <a href="#" class="w-100 text-neutral-80 py-4"
+                ><span
+                  class="material-icons-outlined align-bottom text-neutral-80 me-2"
+                >
+                  favorite_border</span
+                >我的收藏</a
+              >
+            </li>
+            <li>
+              <a href="#" class="w-100 text-neutral-80 py-4"
+                ><span
+                  class="material-icons-outlined align-bottom text-neutral-80 me-2"
+                >
+                  settings </span
+                >帳號設定</a
+              >
+            </li>
+          </ul>
+
+          <div class="mt-auto">
+            <a href="#" class="w-100 text-neutral-80 py-4"
+              ><span
+                class="material-icons-outlined align-bottom text-neutral-60 me-2"
+              >
+                logout </span
+              >登出</a
             >
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 未登入 -->
+    <button
+      class="btn border-0 p-2 d-lg-none"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvas-guest-message"
+      aria-controls="offcanvasExample"
+      id="offcanvas-guest-message-btn"
+    >
+      <span class="material-icons-outlined align-bottom"> menu </span>
+    </button>
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvas-guest-message"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header pt-7 pe-7">
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body p-7 pt-0">
+        <div class="d-flex align-items-center pb-5 border-bottom">
+          <div class="me-2">
+            <img src="/assets/images/ic_profile.svg" alt="ic_profile" />
+          </div>
+          <div>
+            <p class="fw-bold text-primary-100">訪客</p>
+            <p class="text-neutral-80">未登入</p>
+          </div>
+        </div>
+        <div class="d-flex flex-column mt-7 h-100">
+          <div>
+            <p class="fs-lg fw-bold lh-sm text-primary-100 mb-1">
+              歡迎來到 ZOBAA
+            </p>
+            <p class="text-neutral-80">
+              加入會員即可立即訂購、收藏行程，並享相關優惠好禮。
+            </p>
+          </div>
+          <div class="mt-auto">
+            <button
+              type="button"
+              class="w-100 btn bg-primary-100 text-white fw-semibold p-5 rounded-3"
+            >
+              登入 / 註冊
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
