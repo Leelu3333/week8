@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>about</title>
-    <script type="module" crossorigin src="/week8/assets/main-BUS6_NRb.js"></script>
-    <link rel="stylesheet" crossorigin href="/week8/assets/main-CDhN4fN6.css">
+    <script type="module" crossorigin src="/week8/assets/main-D_pCHFgr.js"></script>
+    <link rel="stylesheet" crossorigin href="/week8/assets/main-WT3SbSVA.css">
   </head>
   <body>
     <nav class="navbar py-4 py-lg-5 fixed-top">
@@ -80,7 +80,7 @@
 
     <div id="user-status" class="d-none d-lg-block">
       <!-- 會員頭像 -->
-      <div id="user-avatar" class="d-flex align-items-center ms-5">
+      <a href="#" id="user-avatar" class="d-flex align-items-center ms-5">
         <img
           src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week8/user/avatar-1.png?raw=true"
           alt="會員頭像"
@@ -88,8 +88,7 @@
           height="32px"
         />
         <p class="ms-2 py-1 text-primary-100 fw-bold">Jessica</p>
-      </div>
-
+      </a>
       <!-- 未登入按鈕 -->
       <div id="guest-message" class="ms-5">
         <button
@@ -100,24 +99,24 @@
         </button>
       </div>
     </div>
-
+    <!-- 登入 -->
     <button
       class="btn border-0 p-2 d-lg-none"
       type="button"
       data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasNavbar"
-      aria-controls="offcanvasNavbar"
+      data-bs-target="#offcanvas-user-avatar"
+      aria-controls="offcanvasExample"
+      id="offcanvas-user-avatar-btn"
     >
       <span class="material-icons-outlined align-bottom"> menu </span>
     </button>
     <div
       class="offcanvas offcanvas-end"
       tabindex="-1"
-      id="offcanvasNavbar"
-      aria-labelledby="offcanvasNavbarLabel"
+      id="offcanvas-user-avatar"
+      aria-labelledby="offcanvasExampleLabel"
     >
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+      <div class="offcanvas-header pt-7 pe-7">
         <button
           type="button"
           class="btn-close text-reset"
@@ -125,44 +124,116 @@
           aria-label="Close"
         ></button>
       </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="offcanvasNavbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
+      <div class="offcanvas-body p-7 pt-0">
+        <div class="d-flex align-items-center pb-5 border-bottom">
+          <div class="me-2">
+            <img
+              src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week8/user/avatar-1.png?raw=true"
+              alt="avatar-1.png"
+              width="32px"
+            />
+          </div>
+          <div>
+            <p class="fw-bold text-primary-100">Jessica</p>
+            <p class="text-neutral-80">jessica.yen@gamil.com</p>
+          </div>
+        </div>
+        <div class="d-flex flex-column mt-5 h-100">
+          <ul>
+            <li>
+              <a href="#" class="w-100 text-neutral-80 py-4"
+                ><span
+                  class="material-icons-outlined align-bottom text-neutral-80 me-2"
+                >
+                  article </span
+                >訂單管理</a
+              >
+            </li>
+            <li>
+              <a href="#" class="w-100 text-neutral-80 py-4"
+                ><span
+                  class="material-icons-outlined align-bottom text-neutral-80 me-2"
+                >
+                  favorite_border</span
+                >我的收藏</a
+              >
+            </li>
+            <li>
+              <a href="#" class="w-100 text-neutral-80 py-4"
+                ><span
+                  class="material-icons-outlined align-bottom text-neutral-80 me-2"
+                >
+                  settings </span
+                >帳號設定</a
+              >
+            </li>
+          </ul>
+
+          <div class="mt-auto">
+            <a href="#" class="w-100 text-neutral-80 py-4"
+              ><span
+                class="material-icons-outlined align-bottom text-neutral-60 me-2"
+              >
+                logout </span
+              >登出</a
             >
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 未登入 -->
+    <button
+      class="btn border-0 p-2 d-lg-none"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvas-guest-message"
+      aria-controls="offcanvasExample"
+      id="offcanvas-guest-message-btn"
+    >
+      <span class="material-icons-outlined align-bottom"> menu </span>
+    </button>
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvas-guest-message"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header pt-7 pe-7">
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body p-7 pt-0">
+        <div class="d-flex align-items-center pb-5 border-bottom">
+          <div class="me-2">
+            <img src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='16'%20cy='16'%20r='16'%20fill='%23CBB6AF'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M20%2013C20%2014.0609%2019.5786%2015.0783%2018.8284%2015.8284C18.0783%2016.5786%2017.0609%2017%2016%2017C14.9391%2017%2013.9217%2016.5786%2013.1716%2015.8284C12.4214%2015.0783%2012%2014.0609%2012%2013C12%2011.9391%2012.4214%2010.9217%2013.1716%2010.1716C13.9217%209.42143%2014.9391%209%2016%209C17.0609%209%2018.0783%209.42143%2018.8284%2010.1716C19.5786%2010.9217%2020%2011.9391%2020%2013ZM18%2013C18%2013.5304%2017.7893%2014.0391%2017.4142%2014.4142C17.0391%2014.7893%2016.5304%2015%2016%2015C15.4696%2015%2014.9609%2014.7893%2014.5858%2014.4142C14.2107%2014.0391%2014%2013.5304%2014%2013C14%2012.4696%2014.2107%2011.9609%2014.5858%2011.5858C14.9609%2011.2107%2015.4696%2011%2016%2011C16.5304%2011%2017.0391%2011.2107%2017.4142%2011.5858C17.7893%2011.9609%2018%2012.4696%2018%2013Z'%20fill='%23F3EEEC'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M16%205C9.925%205%205%209.925%205%2016C5%2022.075%209.925%2027%2016%2027C22.075%2027%2027%2022.075%2027%2016C27%209.925%2022.075%205%2016%205ZM7%2016C7%2018.09%207.713%2020.014%208.908%2021.542C9.74723%2020.4399%2010.8299%2019.5467%2012.0714%2018.9323C13.313%2018.3179%2014.6797%2017.9988%2016.065%2018C17.4323%2017.9987%2018.7819%2018.3095%2020.0109%2018.9088C21.2399%2019.508%2022.316%2020.3799%2023.157%2021.458C24.0234%2020.3216%2024.6068%2018.9952%2024.8589%2017.5886C25.111%2016.182%2025.0244%2014.7355%2024.6065%2013.369C24.1886%2012.0024%2023.4512%2010.755%2022.4555%209.73004C21.4598%208.70503%2020.2343%207.93186%2018.8804%207.47451C17.5265%207.01716%2016.0832%206.88877%2014.6699%207.09997C13.2565%207.31117%2011.9138%207.85589%2010.7528%208.68905C9.59175%209.52222%208.64581%2010.6199%207.99323%2011.8912C7.34065%2013.1625%207.00018%2014.571%207%2016ZM16%2025C13.9339%2025.0031%2011.9303%2024.2923%2010.328%2022.988C10.9729%2022.0647%2011.8313%2021.3109%2012.8302%2020.7907C13.829%2020.2705%2014.9388%2019.9992%2016.065%2020C17.1772%2019.9991%2018.2735%2020.2636%2019.2629%2020.7714C20.2524%2021.2793%2021.1064%2022.0159%2021.754%2022.92C20.1393%2024.2667%2018.1026%2025.0029%2016%2025Z'%20fill='%23F3EEEC'/%3e%3c/svg%3e" alt="ic_profile" />
+          </div>
+          <div>
+            <p class="fw-bold text-primary-100">訪客</p>
+            <p class="text-neutral-80">未登入</p>
+          </div>
+        </div>
+        <div class="d-flex flex-column mt-7 h-100">
+          <div>
+            <p class="fs-lg fw-bold lh-sm text-primary-100 mb-1">
+              歡迎來到 ZOBAA
+            </p>
+            <p class="text-neutral-80">
+              加入會員即可立即訂購、收藏行程，並享相關優惠好禮。
+            </p>
+          </div>
+          <div class="mt-auto">
+            <button
+              type="button"
+              class="w-100 btn bg-primary-100 text-white fw-semibold p-5 rounded-3"
+            >
+              登入 / 註冊
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
