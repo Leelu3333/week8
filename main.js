@@ -35,9 +35,34 @@ console.log('Hello world');
       slidesPerView: 2,
     },
     // when window width is >= 768px
-    992: {
+    768: {
       slidesPerView: 3,
+    },
+    // when window width is >= 992px
+    992: {
+      slidesPerView: 4,
+    },
+  }
+    });
+
+    var swiper2 = new Swiper(".mySwiper2", {
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+      },
+      slidesPerView: 1.1,
+      spaceBetween: 16,
+      breakpoints: {
+    
+    // when window width is >= 992px
+    992: {
+      slidesPerView: 1.5,
+    },
+     // when window width is >= 1200px
+    1200: {
+      slidesPerView: 1.7,
     },
      
   }
     });
+    
