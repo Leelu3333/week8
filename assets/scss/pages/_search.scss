@@ -17,7 +17,31 @@
   width: 64px;
   height: 64px;
 }
-
+.search-hit-hover:hover {
+  box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
+}
+.search.swiper-slide:hover {
+  img,
+  .big {
+    transform: scale(1.1);
+  }
+  .title {
+    color: $primary;
+  }
+}
+.search-tip-hover {
+  .text {
+    color: $neutral-80;
+  }
+}
+.search-tip-hover:hover {
+  .title {
+    color: $primary;
+  }
+  .text {
+    color: $primary-60;
+  }
+}
 @media (min-width: 992px) {
   .search-intro {
     padding-top: 156px;
