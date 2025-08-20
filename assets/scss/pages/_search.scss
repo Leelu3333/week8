@@ -1,0 +1,30 @@
+.search-intro {
+  padding-top: 112px;
+  padding-bottom: 40px;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  content: '/';
+  padding-right: 12px;
+}
+.img-group img {
+  max-width: 100%;
+  min-width: 0;
+  /*  用於解決 flex 子元素溢出問題，參考文章：https://juejin.cn/post/7307041255740833830  */
+  display: block;
+  object-fit: cover;
+}
+.category-img {
+  width: 64px;
+  height: 64px;
+}
+
+@media (min-width: 992px) {
+  .search-intro {
+    padding-top: 156px;
+    padding-bottom: 80px;
+  }
+  .category-img {
+    width: 150px;
+    height: 150px;
+  }
+}

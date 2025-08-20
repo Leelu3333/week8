@@ -48,3 +48,20 @@ $utilities: map-merge(
     )
   )
 );
+.rounded-top-end-5 {
+  border-top-right-radius: 24px;
+}
+.rounded-bottom-end-5 {
+  border-bottom-right-radius: 24px;
+}
+@media (min-width: 992px) {
+  .w-lg-700 {
+    width: 700px;
+  }
+  .w-lg-300 {
+    width: 300px;
+  }
+  .pt-lg-156 {
+    padding-top: 156px;
+  }
+}

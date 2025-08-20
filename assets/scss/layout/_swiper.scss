@@ -1,0 +1,51 @@
+// 首頁
+.recommend .swiper,
+.map .swiper {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 48px;
+}
+.recommend .swiper-pagination-bullet-active {
+  background: $primary-40;
+  width: 24px;
+  border-radius: 100px;
+}
+.map .swiper-pagination-bullet-active {
+  background: $primary-100;
+  width: 24px;
+  border-radius: 100px;
+}
+
+// 地點搜尋頁
+.search-1 .swiper {
+  width: 100%;
+  height: 100%;
+}
+.search-1 .swiper-slide {
+  height: 240px;
+}
+.search-1 .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.search-1 .swiper-pagination-bullet {
+  background-color: $white;
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+.search-1 .swiper-pagination-bullet-active {
+  background-color: $primary-100;
+  width: 24px;
+  border-radius: 100px;
+}
+.search-1 .swiper-pagination {
+  position: absolute !important;
+  bottom: 12px !important;
+  left: 24px !important;
+  width: auto !important;
+  text-align: left !important;
+}

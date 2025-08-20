@@ -33,6 +33,7 @@ console.log('Hello world');
     offcanvasGuestMessageBtn.classList.remove('d-none');
   }
 
+  // 首頁輪播
    var swiper = new Swiper(".mySwiper", {
       pagination: {
         el: ".swiper-pagination",
@@ -78,3 +79,10 @@ console.log('Hello world');
   }
     });
     
+  //地圖搜尋頁輪播 
+    var swiper3 = new Swiper(".mySwiper3", {
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+      },
+    });
