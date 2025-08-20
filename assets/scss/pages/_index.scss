@@ -106,12 +106,19 @@
     transform: translateX(-200%);
   }
 }
+
+.fs-150 {
+  font-size: 150px;
+}
 @media (min-width: 992px) {
   .banner {
     padding-top: 300px;
   }
   .w-lg-700 {
     width: 700px;
+  }
+  .w-lg-300 {
+    width: 300px;
   }
   .recommend .card {
     width: 25%;
@@ -169,5 +176,13 @@
   .marquee img {
     height: 156px;
     margin-right: 24px;
+  }
+  .bg-top-img {
+    top: -360px;
+    left: -240px;
+  }
+  .bg-down-img {
+    bottom: -480px;
+    right: 49px;
   }
 }
